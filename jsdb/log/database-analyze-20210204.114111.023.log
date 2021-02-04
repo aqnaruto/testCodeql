@@ -1,0 +1,50 @@
+[2021-02-04 11:41:11] This is codeql database analyze jsdb ql/ --format=sarif-latest --output=jsdb-10086.csv
+[2021-02-04 11:41:11] Log file was started late.
+[2021-02-04 11:41:11] [PROGRESS] database analyze> Running queries.
+[2021-02-04 11:41:11] Running plumbing command: codeql database run-queries --ml-model-path= --native-library-path= --warnings=show --no-rerun -- C:\Users\Administrator\Desktop\TEST\testCodeql\jsdb ql/
+[2021-02-04 11:41:11] Calling plumbing command: codeql resolve ram --format=json
+[2021-02-04 11:41:11] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx4090M",
+                        "--off-heap-ram=4090"
+                      ]
+[2021-02-04 11:41:11] Spawning plumbing command: execute queries -J-Xmx4090M --off-heap-ram=4090 --verbosity=progress --logdir=C:\Users\Administrator\Desktop\TEST\testCodeql\jsdb\log --ml-model-path=C:\Users\Administrator\Desktop\TEST\testCodeql --native-library-path=C:\Users\Administrator\Desktop\TEST\testCodeql --warnings=show --no-rerun --output=C:\Users\Administrator\Desktop\TEST\testCodeql\jsdb\results -- C:\Users\Administrator\Desktop\TEST\testCodeql\jsdb\db-javascript ql/
+[2021-02-04 11:41:12] Plumbing command codeql execute queries terminated with status 0.
+[2021-02-04 11:41:12] Plumbing command codeql database run-queries completed with status 0.
+[2021-02-04 11:41:12] [PROGRESS] database analyze> Interpreting results.
+[2021-02-04 11:41:12] Running plumbing command: codeql database interpret-results --format=sarif-latest -o=C:\Users\Administrator\Desktop\TEST\testCodeql\jsdb-10086.csv --max-paths=4 --csv-location-format=line-column -- C:\Users\Administrator\Desktop\TEST\testCodeql\jsdb ql/
+[2021-02-04 11:41:12] Calling plumbing command: codeql resolve queries --format=json -- ql/
+[2021-02-04 11:41:12] [SPAMMY] resolve queries> Scanning for QL files at C:\Users\Administrator\Desktop\TEST\testCodeql\ql.
+[2021-02-04 11:41:12] [SPAMMY] resolve queries> Found 1 QL files in C:\Users\Administrator\Desktop\TEST\testCodeql\ql.
+[2021-02-04 11:41:12] Plumbing command codeql resolve queries completed:
+                      [
+                        "C:\\Users\\Administrator\\Desktop\\TEST\\testCodeql\\ql\\ArrowMethodOnVueInstance.ql"
+                      ]
+[2021-02-04 11:41:12] Calling plumbing command: codeql resolve library-path --query=C:\Users\Administrator\Desktop\TEST\testCodeql\ql\ArrowMethodOnVueInstance.ql --full-library-path=none --dbscheme=none --format=json
+[2021-02-04 11:41:12] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\Administrator\Desktop\TEST\testCodeql\ql\ArrowMethodOnVueInstance.ql.
+[2021-02-04 11:41:12] [DETAILS] resolve library-path> Found enclosing pack 'codeql-javascript' at C:\Users\Administrator\Desktop\TEST\testCodeql\ql.
+[2021-02-04 11:41:12] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\Administrator\Desktop\TEST\testCodeql\ql\.cache.
+[2021-02-04 11:41:12] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as C:\Users\Administrator\Desktop\TEST\testCodeql\none
+[2021-02-04 11:41:12] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2021-02-04 11:41:12] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\Administrator\\Desktop\\TEST\\testCodeql\\none"
+                        ],
+                        "dbscheme" : "C:\\Users\\Administrator\\Desktop\\TEST\\testCodeql\\none",
+                        "compilationCache" : [
+                          "C:\\Users\\Administrator\\Desktop\\TEST\\testCodeql\\ql\\.cache"
+                        ],
+                        "qlPackName" : "codeql-javascript",
+                        "relativeName" : "codeql-javascript\\ArrowMethodOnVueInstance.ql"
+                      }
+[2021-02-04 11:41:12] Exception caught at top level: Could not process query metadata.
+                      Error was: Expected result pattern(s) are not present for query kind "Problem"(INVALID_RESULT_PATTERNS).
+                      com.semmle.cli2.database.InterpretResultsCommand.executeSubcommand(InterpretResultsCommand.java:113)
+                      com.semmle.cli2.picocli.PlumbingRunner.run(PlumbingRunner.java:110)
+                      com.semmle.cli2.picocli.SubcommandCommon.runPlumbingInProcess(SubcommandCommon.java:159)
+                      com.semmle.cli2.database.AnalyzeCommand.executeSubcommand(AnalyzeCommand.java:83)
+                      com.semmle.cli2.picocli.SubcommandCommon.call(SubcommandCommon.java:430)
+                      com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:201)
+                      com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:209)
+                      com.semmle.cli2.CodeQL.main(CodeQL.java:91)

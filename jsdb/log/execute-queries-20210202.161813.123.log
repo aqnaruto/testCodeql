@@ -1,0 +1,46 @@
+[2021-02-02 16:18:13] This is codeql execute queries -J-Xmx4090M --off-heap-ram=4090 --verbosity=progress --logdir=C:\Users\Administrator\Desktop\Vue\jsdb\log --ml-model-path=C:\Users\Administrator\Desktop\Vue --native-library-path=C:\Users\Administrator\Desktop\Vue --warnings=show --no-rerun --output=C:\Users\Administrator\Desktop\Vue\jsdb\results -- C:\Users\Administrator\Desktop\Vue\jsdb\db-javascript ql/
+[2021-02-02 16:18:13] Calling plumbing command: codeql resolve queries --format=json -- ql/
+[2021-02-02 16:18:13] [SPAMMY] resolve queries> Scanning for QL files at C:\Users\Administrator\Desktop\Vue\ql.
+[2021-02-02 16:18:13] [SPAMMY] resolve queries> Found 1 QL files in C:\Users\Administrator\Desktop\Vue\ql.
+[2021-02-02 16:18:13] Plumbing command codeql resolve queries completed:
+                      [
+                        "C:\\Users\\Administrator\\Desktop\\Vue\\ql\\ArrowMethodOnVueInstance.ql"
+                      ]
+[2021-02-02 16:18:13] Creating executor with 1 threads.
+[2021-02-02 16:18:13] Calling plumbing command: codeql resolve library-path --query=C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql --format=json
+[2021-02-02 16:18:13] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql.
+[2021-02-02 16:18:13] [DETAILS] resolve library-path> Found enclosing pack 'codeql-javascript' at C:\Users\Administrator\Desktop\Vue\ql.
+[2021-02-02 16:18:13] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\Administrator\Desktop\Vue\ql\.cache.
+[2021-02-02 16:18:13] [DETAILS] resolve library-path> Resolving library dependencies from C:\Users\Administrator\Desktop\Vue\ql\qlpack.yml.
+[2021-02-02 16:18:13] [ERROR] resolve library-path> ERROR: Cannot find dbscheme at: C:\Users\Administrator\Desktop\Vue\ql\semmlecode.javascript.dbscheme (C:\Users\Administrator\Desktop\Vue\ql\qlpack.yml:1,1-1)
+[2021-02-02 16:18:13] [ERROR] Exception collected asynchronously; saving it while cancelling everything
+                              com.semmle.util.exception.UserError: Could not resolve library path for C:\Users\Administrator\Desktop\Vue\ql
+                              	at com.semmle.cli2.resolve.ResolveLibraryPathCommand.executeJSON(ResolveLibraryPathCommand.java:239)
+                              	at com.semmle.cli2.resolve.ResolveLibraryPathCommand.executeJSON(ResolveLibraryPathCommand.java:44)
+                              	at com.semmle.cli2.picocli.SimpleJsonSubcommand.executeInsistingOnJSON(SimpleJsonSubcommand.java:101)
+                              	at com.semmle.cli2.picocli.PlumbingRunner.call(PlumbingRunner.java:54)
+                              	at com.semmle.cli2.picocli.SubcommandCommon.callPlumbingInProcess(SubcommandCommon.java:123)
+                              	at com.semmle.cli2.execute.ExecuteQueriesCommand.lambda$executeSubcommand$0(ExecuteQueriesCommand.java:228)
+                              	at com.semmle.cli2.ql.Paralleliser$1.lambda$next$0(Paralleliser.java:68)
+                              	at com.semmle.util.concurrent.FutureUtils.supplyCompose(FutureUtils.java:217)
+                              	at com.semmle.cli2.ql.Paralleliser.lambda$startMoreJobs$1(Paralleliser.java:104)
+                              	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+                              	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+                              	at java.base/java.lang.Thread.run(Unknown Source)
+[2021-02-02 16:18:13] Sequence stamp origin is -6629308249245768200
+[2021-02-02 16:18:13] Stopped the world to close the cache at sequence stamp o+0
+[2021-02-02 16:18:13] The disk cache is freshly trimmed; leave it be.
+[2021-02-02 16:18:13] Starting the world again
+[2021-02-02 16:18:13] Excption caught in async task: Could not resolve library path for C:\Users\Administrator\Desktop\Vue\ql
+                      com.semmle.cli2.resolve.ResolveLibraryPathCommand.executeJSON(ResolveLibraryPathCommand.java:239)
+                      com.semmle.cli2.resolve.ResolveLibraryPathCommand.executeJSON(ResolveLibraryPathCommand.java:44)
+                      com.semmle.cli2.picocli.SimpleJsonSubcommand.executeInsistingOnJSON(SimpleJsonSubcommand.java:101)
+                      com.semmle.cli2.picocli.PlumbingRunner.call(PlumbingRunner.java:54)
+                      com.semmle.cli2.picocli.SubcommandCommon.callPlumbingInProcess(SubcommandCommon.java:123)
+                      com.semmle.cli2.execute.ExecuteQueriesCommand.lambda$executeSubcommand$0(ExecuteQueriesCommand.java:228)
+                      com.semmle.cli2.ql.Paralleliser$1.lambda$next$0(Paralleliser.java:68)
+                      com.semmle.util.concurrent.FutureUtils.supplyCompose(FutureUtils.java:217)
+                      com.semmle.cli2.ql.Paralleliser.lambda$startMoreJobs$1(Paralleliser.java:104)
+                      java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+                      java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+                      java.base/java.lang.Thread.run(Unknown Source)

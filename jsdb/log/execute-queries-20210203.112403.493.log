@@ -1,0 +1,35 @@
+[2021-02-03 11:24:03] This is codeql execute queries -J-Xmx4090M --off-heap-ram=4090 --verbosity=progress --logdir=C:\Users\Administrator\Desktop\TEST\testCodeql\jsdb\log --ml-model-path=C:\Users\Administrator\Desktop\TEST\testCodeql --native-library-path=C:\Users\Administrator\Desktop\TEST\testCodeql --warnings=show --no-rerun --output=C:\Users\Administrator\Desktop\TEST\testCodeql\jsdb\results -- C:\Users\Administrator\Desktop\TEST\testCodeql\jsdb\db-javascript ql/
+[2021-02-03 11:24:03] Calling plumbing command: codeql resolve queries --format=json -- ql/
+[2021-02-03 11:24:03] [SPAMMY] resolve queries> Scanning for QL files at C:\Users\Administrator\Desktop\TEST\testCodeql\ql.
+[2021-02-03 11:24:03] [SPAMMY] resolve queries> Found 1 QL files in C:\Users\Administrator\Desktop\TEST\testCodeql\ql.
+[2021-02-03 11:24:03] Plumbing command codeql resolve queries completed:
+                      [
+                        "C:\\Users\\Administrator\\Desktop\\TEST\\testCodeql\\ql\\ArrowMethodOnVueInstance.ql"
+                      ]
+[2021-02-03 11:24:03] Creating executor with 1 threads.
+[2021-02-03 11:24:03] Calling plumbing command: codeql resolve library-path --query=C:\Users\Administrator\Desktop\TEST\testCodeql\ql\ArrowMethodOnVueInstance.ql --format=json
+[2021-02-03 11:24:03] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\Administrator\Desktop\TEST\testCodeql\ql\ArrowMethodOnVueInstance.ql.
+[2021-02-03 11:24:03] [DETAILS] resolve library-path> Found enclosing pack 'codeql-javascript' at C:\Users\Administrator\Desktop\TEST\testCodeql\ql.
+[2021-02-03 11:24:03] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\Administrator\Desktop\TEST\testCodeql\ql\.cache.
+[2021-02-03 11:24:03] [DETAILS] resolve library-path> Resolving library dependencies from C:\Users\Administrator\Desktop\TEST\testCodeql\ql\qlpack.yml.
+[2021-02-03 11:24:03] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\Administrator\Desktop\TEST\testCodeql\ql resolved OK.
+[2021-02-03 11:24:03] [DETAILS] resolve library-path> Found no dbscheme through dependencies.
+[2021-02-03 11:24:03] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\Administrator\\Desktop\\TEST\\testCodeql\\ql"
+                        ],
+                        "compilationCache" : [
+                          "C:\\Users\\Administrator\\Desktop\\TEST\\testCodeql\\ql\\.cache"
+                        ],
+                        "qlPackName" : "codeql-javascript",
+                        "relativeName" : "codeql-javascript\\ArrowMethodOnVueInstance.ql",
+                        "possibleAdvice" : "You probably need to specify a libraryPathDependencies list in C:\\Users\\Administrator\\Desktop\\TEST\\testCodeql\\ql\\qlpack.yml."
+                      }
+[2021-02-03 11:24:03] [PROGRESS] execute queries> [1/1] No need to rerun C:\Users\Administrator\Desktop\TEST\testCodeql\ql\ArrowMethodOnVueInstance.ql.
+[2021-02-03 11:24:03] [PROGRESS] execute queries> Shutting down query evaluator.
+[2021-02-03 11:24:03] Sequence stamp origin is -6629012968683377085
+[2021-02-03 11:24:03] Stopped the world to close the cache at sequence stamp o+0
+[2021-02-03 11:24:03] The disk cache is freshly trimmed; leave it be.
+[2021-02-03 11:24:03] Starting the world again
+[2021-02-03 11:24:03] Terminating normally.

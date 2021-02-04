@@ -1,0 +1,66 @@
+[2021-02-02 16:06:11] This is codeql execute queries -J-Xmx4090M --off-heap-ram=4090 --verbosity=progress --logdir=C:\Users\Administrator\Desktop\Vue\jsdb\log --ml-model-path=C:\Users\Administrator\Desktop\Vue --native-library-path=C:\Users\Administrator\Desktop\Vue --warnings=show --no-rerun --output=C:\Users\Administrator\Desktop\Vue\jsdb\results -- C:\Users\Administrator\Desktop\Vue\jsdb\db-javascript ql/
+[2021-02-02 16:06:11] Calling plumbing command: codeql resolve queries --format=json -- ql/
+[2021-02-02 16:06:11] [SPAMMY] resolve queries> Scanning for QL files at C:\Users\Administrator\Desktop\Vue\ql.
+[2021-02-02 16:06:11] [SPAMMY] resolve queries> Found 1 QL files in C:\Users\Administrator\Desktop\Vue\ql.
+[2021-02-02 16:06:11] Plumbing command codeql resolve queries completed:
+                      [
+                        "C:\\Users\\Administrator\\Desktop\\Vue\\ql\\ArrowMethodOnVueInstance.ql"
+                      ]
+[2021-02-02 16:06:11] Creating executor with 1 threads.
+[2021-02-02 16:06:11] Calling plumbing command: codeql resolve library-path --query=C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql --format=json
+[2021-02-02 16:06:11] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql.
+[2021-02-02 16:06:11] [DETAILS] resolve library-path> Found no enclosing pack; trying after symlink resolution with C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql.
+[2021-02-02 16:06:11] [DETAILS] resolve library-path> Found enclosing pack 'ql' at C:\Users\Administrator\Desktop\Vue\ql.
+[2021-02-02 16:06:11] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\Administrator\Desktop\Vue\ql\.cache.
+[2021-02-02 16:06:11] [DETAILS] resolve library-path> Resolving library dependencies from C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql.
+[2021-02-02 16:06:11] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\Administrator\Desktop\Vue\ql resolved OK.
+[2021-02-02 16:06:11] [DETAILS] resolve library-path> Found no dbscheme through dependencies.
+[2021-02-02 16:06:11] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\Administrator\\Desktop\\Vue\\ql"
+                        ],
+                        "compilationCache" : [
+                          "C:\\Users\\Administrator\\Desktop\\Vue\\ql\\.cache"
+                        ],
+                        "qlPackName" : "ql",
+                        "relativeName" : "ql\\ArrowMethodOnVueInstance.ql",
+                        "possibleAdvice" : "There should probably be a qlpack.yml file declaring dependencies in C:\\Users\\Administrator\\Desktop\\Vue\\ql or an enclosing directory."
+                      }
+[2021-02-02 16:06:11] [PROGRESS] execute queries> Compiling query plan for C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql.
+[2021-02-02 16:06:11] [DETAILS] execute queries> Resolving imports for C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql.
+[2021-02-02 16:06:12] Resolved file set for C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql hashes to ba6a138627dcb59f1094a5fbcc9b4cfaddf9fdb1.
+[2021-02-02 16:06:12] [DETAILS] execute queries> Checking QL for C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql.
+[2021-02-02 16:06:12] ExternalModuleBindingPass ...
+[2021-02-02 16:06:12] ExternalModuleBindingPass time: 00:00.001
+[2021-02-02 16:06:12] QLPredicateSynthesiser ...
+[2021-02-02 16:06:12] QLPredicateSynthesiser time: 00:00.000
+[2021-02-02 16:06:12] DeclarationBindingPass ...
+[2021-02-02 16:06:12] DeclarationBindingPass time: 00:00.002
+[2021-02-02 16:06:12] Fixed point time ...
+[2021-02-02 16:06:12] Fixed point time time: 00:00.004
+[2021-02-02 16:06:12] ReferenceBindingPass ...
+[2021-02-02 16:06:12] ReferenceBindingPass time: 00:00.000
+[2021-02-02 16:06:12] EntityTypeUpdateBindingPass ...
+[2021-02-02 16:06:12] EntityTypeUpdateBindingPass time: 00:00.000
+[2021-02-02 16:06:12] ReferenceBindingCheck ...
+[2021-02-02 16:06:12] ReferenceBindingCheck time: 00:00.001
+[2021-02-02 16:06:12] PredicateBodyBindingPass ...
+[2021-02-02 16:06:12] PredicateBodyBindingPass time: 00:00.000
+[2021-02-02 16:06:12] LanguagePragmaPropagationPass ...
+[2021-02-02 16:06:12] LanguagePragmaPropagationPass time: 00:00.000
+[2021-02-02 16:06:12] Ambiguity checks ...
+[2021-02-02 16:06:12] Ambiguity checks time: 00:00.001
+[2021-02-02 16:06:12] Ql checks ...
+[2021-02-02 16:06:12] Ql checks time: 00:00.033
+[2021-02-02 16:06:12] [ERROR] execute queries> ERROR: Could not resolve module javascript. There should probably be a qlpack.yml file declaring dependencies in C:\Users\Administrator\Desktop\Vue\ql or an enclosing directory. (C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql:12,8-18)
+[2021-02-02 16:06:12] [ERROR] execute queries> ERROR: Could not resolve module Vue. There should probably be a qlpack.yml file declaring dependencies in C:\Users\Administrator\Desktop\Vue\ql or an enclosing directory. (C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql:14,6-9)
+[2021-02-02 16:06:12] [ERROR] execute queries> ERROR: Could not resolve module DataFlow. There should probably be a qlpack.yml file declaring dependencies in C:\Users\Administrator\Desktop\Vue\ql or an enclosing directory. (C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql:14,30-38)
+[2021-02-02 16:06:12] [ERROR] execute queries> ERROR: Could not resolve module DataFlow. There should probably be a qlpack.yml file declaring dependencies in C:\Users\Administrator\Desktop\Vue\ql or an enclosing directory. (C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql:14,50-58)
+[2021-02-02 16:06:12] [ERROR] execute queries> ERROR: Could not resolve type ThisExpr (C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql:14,80-88)
+[2021-02-02 16:06:12] [ERROR] execute queries> ERROR: Could not resolve type ArrowFunctionExpr (C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql:18,29-46)
+[2021-02-02 16:06:12] Sequence stamp origin is -6629311347922938343
+[2021-02-02 16:06:12] Stopped the world to close the cache at sequence stamp o+0
+[2021-02-02 16:06:12] The disk cache is freshly trimmed; leave it be.
+[2021-02-02 16:06:12] Starting the world again
+[2021-02-02 16:06:12] Exiting with code 2

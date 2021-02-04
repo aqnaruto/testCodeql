@@ -1,0 +1,15 @@
+[2021-02-02 16:29:11] This is codeql database analyze jsdb ql/ --format=sarif-latest --output=jsdb-10086.csv
+[2021-02-02 16:29:11] Log file was started late.
+[2021-02-02 16:29:11] [PROGRESS] database analyze> Running queries.
+[2021-02-02 16:29:11] Running plumbing command: codeql database run-queries --ml-model-path= --native-library-path= --warnings=show --no-rerun -- C:\Users\Administrator\Desktop\Vue\jsdb ql/
+[2021-02-02 16:29:11] Calling plumbing command: codeql resolve ram --format=json
+[2021-02-02 16:29:11] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx4090M",
+                        "--off-heap-ram=4090"
+                      ]
+[2021-02-02 16:29:11] Spawning plumbing command: execute queries -J-Xmx4090M --off-heap-ram=4090 --verbosity=progress --logdir=C:\Users\Administrator\Desktop\Vue\jsdb\log --ml-model-path=C:\Users\Administrator\Desktop\Vue --native-library-path=C:\Users\Administrator\Desktop\Vue --warnings=show --no-rerun --output=C:\Users\Administrator\Desktop\Vue\jsdb\results -- C:\Users\Administrator\Desktop\Vue\jsdb\db-javascript ql/
+[2021-02-02 16:29:13] [ERROR] Spawned process exited abnormally (code 2; tried to run: [C:\codeql\tools\win64\java\bin\java.exe, -Xmx4090M, "-Djava.library.path=C:\codeql\tools\win64\java\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\codeql;d:\dev\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\gradle/bin;C:\Program Files\nodejs\;C:\Program Files\python;C:\Program Files\python\Scripts;;D:\BtSoft\panel\script;C:\Program Files\MongoDB\Server\3.6\bin;C:\Program Files (x86)\NetSarang\Xshell 7\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm;.", -cp, C:\codeql\tools\codeql.jar, com.semmle.cli2.CodeQL, execute, queries, -J-Xmx4090M, --off-heap-ram=4090, --verbosity=progress, --logdir=C:\Users\Administrator\Desktop\Vue\jsdb\log, --ml-model-path=C:\Users\Administrator\Desktop\Vue, --native-library-path=C:\Users\Administrator\Desktop\Vue, --warnings=show, --no-rerun, --output=C:\Users\Administrator\Desktop\Vue\jsdb\results, --, C:\Users\Administrator\Desktop\Vue\jsdb\db-javascript, ql/])
+[2021-02-02 16:29:13] Plumbing command codeql execute queries terminated with status 2.
+[2021-02-02 16:29:13] Plumbing command codeql database run-queries completed with status 2.
+[2021-02-02 16:29:13] Exiting with code 2

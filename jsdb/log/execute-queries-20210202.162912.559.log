@@ -1,0 +1,60 @@
+[2021-02-02 16:29:12] This is codeql execute queries -J-Xmx4090M --off-heap-ram=4090 --verbosity=progress --logdir=C:\Users\Administrator\Desktop\Vue\jsdb\log --ml-model-path=C:\Users\Administrator\Desktop\Vue --native-library-path=C:\Users\Administrator\Desktop\Vue --warnings=show --no-rerun --output=C:\Users\Administrator\Desktop\Vue\jsdb\results -- C:\Users\Administrator\Desktop\Vue\jsdb\db-javascript ql/
+[2021-02-02 16:29:12] Calling plumbing command: codeql resolve queries --format=json -- ql/
+[2021-02-02 16:29:12] [SPAMMY] resolve queries> Scanning for QL files at C:\Users\Administrator\Desktop\Vue\ql.
+[2021-02-02 16:29:12] [SPAMMY] resolve queries> Found 1 QL files in C:\Users\Administrator\Desktop\Vue\ql.
+[2021-02-02 16:29:12] Plumbing command codeql resolve queries completed:
+                      [
+                        "C:\\Users\\Administrator\\Desktop\\Vue\\ql\\ArrowMethodOnVueInstance.ql"
+                      ]
+[2021-02-02 16:29:12] Creating executor with 1 threads.
+[2021-02-02 16:29:12] Calling plumbing command: codeql resolve library-path --query=C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql --format=json
+[2021-02-02 16:29:12] [DETAILS] resolve library-path> Resolving query at normalized path C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql.
+[2021-02-02 16:29:12] [DETAILS] resolve library-path> Found enclosing pack 'codeql-javascript' at C:\Users\Administrator\Desktop\Vue\ql.
+[2021-02-02 16:29:12] [DETAILS] resolve library-path> Adding compilation cache at C:\Users\Administrator\Desktop\Vue\ql\.cache.
+[2021-02-02 16:29:12] [DETAILS] resolve library-path> Resolving library dependencies from C:\Users\Administrator\Desktop\Vue\ql\qlpack.yml.
+[2021-02-02 16:29:12] [DETAILS] resolve library-path> QL pack dependencies for C:\Users\Administrator\Desktop\Vue\ql resolved OK.
+[2021-02-02 16:29:12] [DETAILS] resolve library-path> Found no dbscheme through dependencies.
+[2021-02-02 16:29:12] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\Users\\Administrator\\Desktop\\Vue\\ql"
+                        ],
+                        "compilationCache" : [
+                          "C:\\Users\\Administrator\\Desktop\\Vue\\ql\\.cache"
+                        ],
+                        "qlPackName" : "codeql-javascript",
+                        "relativeName" : "codeql-javascript\\ArrowMethodOnVueInstance.ql",
+                        "possibleAdvice" : "You probably need to specify a libraryPathDependencies list in C:\\Users\\Administrator\\Desktop\\Vue\\ql\\qlpack.yml."
+                      }
+[2021-02-02 16:29:12] [PROGRESS] execute queries> Compiling query plan for C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql.
+[2021-02-02 16:29:12] [DETAILS] execute queries> Resolving imports for C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql.
+[2021-02-02 16:29:12] Resolved file set for C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql hashes to 4ec86fcde62324be3b88f27cd33b87ab7641d406.
+[2021-02-02 16:29:12] [DETAILS] execute queries> Checking QL for C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql.
+[2021-02-02 16:29:13] ExternalModuleBindingPass ...
+[2021-02-02 16:29:13] ExternalModuleBindingPass time: 00:00.001
+[2021-02-02 16:29:13] QLPredicateSynthesiser ...
+[2021-02-02 16:29:13] QLPredicateSynthesiser time: 00:00.001
+[2021-02-02 16:29:13] DeclarationBindingPass ...
+[2021-02-02 16:29:13] DeclarationBindingPass time: 00:00.003
+[2021-02-02 16:29:13] Fixed point time ...
+[2021-02-02 16:29:13] Fixed point time time: 00:00.004
+[2021-02-02 16:29:13] ReferenceBindingPass ...
+[2021-02-02 16:29:13] ReferenceBindingPass time: 00:00.000
+[2021-02-02 16:29:13] EntityTypeUpdateBindingPass ...
+[2021-02-02 16:29:13] EntityTypeUpdateBindingPass time: 00:00.000
+[2021-02-02 16:29:13] ReferenceBindingCheck ...
+[2021-02-02 16:29:13] ReferenceBindingCheck time: 00:00.001
+[2021-02-02 16:29:13] PredicateBodyBindingPass ...
+[2021-02-02 16:29:13] PredicateBodyBindingPass time: 00:00.000
+[2021-02-02 16:29:13] LanguagePragmaPropagationPass ...
+[2021-02-02 16:29:13] LanguagePragmaPropagationPass time: 00:00.000
+[2021-02-02 16:29:13] Ambiguity checks ...
+[2021-02-02 16:29:13] Ambiguity checks time: 00:00.003
+[2021-02-02 16:29:13] Ql checks ...
+[2021-02-02 16:29:13] Ql checks time: 00:00.039
+[2021-02-02 16:29:13] [ERROR] execute queries> ERROR: Could not resolve module javascript. You probably need to specify a libraryPathDependencies list in C:\Users\Administrator\Desktop\Vue\ql\qlpack.yml. (C:\Users\Administrator\Desktop\Vue\ql\ArrowMethodOnVueInstance.ql:12,8-18)
+[2021-02-02 16:29:13] Sequence stamp origin is -6629305417024074133
+[2021-02-02 16:29:13] Stopped the world to close the cache at sequence stamp o+0
+[2021-02-02 16:29:13] The disk cache is freshly trimmed; leave it be.
+[2021-02-02 16:29:13] Starting the world again
+[2021-02-02 16:29:13] Exiting with code 2
